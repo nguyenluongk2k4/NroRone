@@ -880,7 +880,7 @@ public class Controller implements IMessageHandler {
 
         if (TaskService.gI().getIdTask(player) == ConstTask.TASK_0_0) {
             NpcService.gI().createTutorial(player, 12639,
-                    "Chào mừng " + player.name + " đến với VŨ TRỤ NGỌC RỒNG\n"
+                    "Chào mừng " + player.name + " đến với NGỌC RỒNG RONE\n"
                     + "Nhiệm vụ đầu tiên của bạn là di chuyển\n"
                     + "Bạn hãy di chuyển nhân vật theo mũi tên chỉ hướng");
         }
@@ -900,7 +900,7 @@ public class Controller implements IMessageHandler {
     }
 
     private void sendThongBaoServer(Player player) {
-        Service.gI().sendThongBaoFromAdmin(player, "|7|Chào Mừng Cư Dân Đã Đến Với VŨ TRỤ NGỌC RỒNG!\n\n"
+        Service.gI().sendThongBaoFromAdmin(player, "|7|Chào Mừng Cư Dân Đã Đến Với NGỌC RỒNG RONE!\n\n"
                       + "|4|(HƯỚNG DẪN : Chat (thongtin) hoặc (info) để xem thông tin nhân vật)\n\n"
                       + "|7|Chúc Các Cư Dân Chơi Game Vui Vẻ <3"+ "\nSự kiện : " + ConstEvent.gI().getNameEv() + " đang diễn ra, hãy mau chóng tham gia!");
     }

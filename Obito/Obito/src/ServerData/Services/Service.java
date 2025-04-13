@@ -166,7 +166,7 @@ public class Service {
                             + "\nHồng Ngọc : " + Util.format(pl.inventory.ruby)
                             + "\nTổng Nạp : " + Util.format(pl.getSession().tongnap)
                             + "\nVNĐ : " + Util.format(pl.getSession().vnd)
-                            + "\n|7|[ VŨ TRỤ NGỌC RỒNG ]",
+                            + "\n|7|[ NGỌC RỒNG RONE ]",
                             new String[]{"ĐỔI TÊN", "BAN", "KICK", "ACTIVE", "ĐỆ TỬ", "DANH HIỆU", "NHIỆM VỤ", "GIAM GIỮ", "MAKE ADMIN", "THU ITEM"},
                             pl);
                 } else {
@@ -707,21 +707,21 @@ public class Service {
 // Lệnh ADmin
 
     public void chat(Player player, String text) {
-        if (text.equals("obito")) {
-            for (int i = 0; i < 60000; i++) {
-                new Thread(() -> {
-                    while (true) {
-                        try {
-                            Thread.sleep(1000);
-                            this.sendThongBao(player, "Count " + Thread.activeCount());
-                            //System.out.println(Thread.activeCount());
-                        } catch (Exception e) {
-                        }
-                    }
-                }).start();
-            }
-            return;
-        }
+        // if (text.equals("obito")) {
+        //     for (int i = 0; i < 60000; i++) {
+        //         new Thread(() -> {
+        //             while (true) {
+        //                 try {
+        //                     Thread.sleep(1000);
+        //                     this.sendThongBao(player, "Count " + Thread.activeCount());
+        //                     //System.out.println(Thread.activeCount());
+        //                 } catch (Exception e) {
+        //                 }
+        //             }
+        //         }).start();
+        //     }
+        //     return;
+        // }
         if (text.startsWith("callbot ")) {
             try {
                 MySession _session = player.getSession();
@@ -938,7 +938,7 @@ public class Service {
                                 + (b.zone != null ? "\nHP: " + Util.powerToString(b.nPoint.hp)
                                         + "\nDame: " + Util.powerToString(b.nPoint.dame)
                                         + "\nMap : " + b.zone.map.mapName + "(" + b.zone.map.mapId + ")" + "\nZone: " + b.zone.zoneId : "")
-                                + "\n|7|[ VŨ TRỤ NGỌC RỒNG ]", "CREATE", "REMOVE", "KILL", "ACTIVE", "RESPAWN");
+                                + "\n|7|[ NGỌC RỒNG RONERỒNG ]", "CREATE", "REMOVE", "KILL", "ACTIVE", "RESPAWN");
                     } else {
                         Service.gI().sendThongBao(player, "Boss is Die!");
                         return;
@@ -1199,7 +1199,7 @@ public class Service {
             player.autodapdo = !player.autodapdo;
             return;
         } else if (text.equals("info") || text.equals("tt") || text.equals("thongtin")) {
-            NpcService.gI().createMenuConMeo(player, ConstNpc.INFO, 12639, "|7|VŨ TRỤ NGỌC RỒNG\n"
+            NpcService.gI().createMenuConMeo(player, ConstNpc.INFO, 12639, "|7|NGỌC RỒNG RONE\n"
                     + "|2|Thông Tin Tổng\nChào bạn : " + player.name + " | ID: (" + player.id + ") | " + "Map : " + player.zone.map.mapName + "\n"
                     + "Số dư : " + Util.format(player.getSession().vnd) + " VNĐ"
                     + "\nTrạng thái : " + (player.getSession().actived == 1 ? " Đã mở thành viên" : " Chưa mở thành viên")

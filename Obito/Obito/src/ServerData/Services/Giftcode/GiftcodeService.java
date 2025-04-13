@@ -45,7 +45,7 @@ public class GiftcodeService {
         GirlkunResultSet rs = GirlkunDB.executeQuery(
                 "SELECT * FROM giftcode_save WHERE `player_id` = " + player.id + " AND `code_da_nhap` = '"+ code + "';");
         if (rs != null && rs.first()) {
-            Service.gI().sendThongBaoFromAdmin(player,"|7|VŨ TRỤ NGỌC RỒNG\n"+ "|6|Giftcode : " + code + "\nBạn đã nhập giftcode này vào lúc : " + rs.getTimestamp("tgian_nhap"));
+            Service.gI().sendThongBaoFromAdmin(player,"|7|NGỌC RỒNG RONERỒNG\n"+ "|6|Giftcode : " + code + "\nBạn đã nhập giftcode này vào lúc : " + rs.getTimestamp("tgian_nhap"));
             return;
         } else {
             rs.dispose();
@@ -53,15 +53,15 @@ public class GiftcodeService {
             if (rs != null && rs.first()) {
                 int count = rs.getInt("count_left");
             if (count < 1) {
-                Service.gI().sendThongBaoFromAdmin(player, "|7|VŨ TRỤ NGỌC RỒNG\n"+ "|6|Giftcode : "+code+"\nĐã hết lượt nhập, vui lòng quay lại sau!");
+                Service.gI().sendThongBaoFromAdmin(player, "|7|NGỌC RỒNG RONERỒNG\n"+ "|6|Giftcode : "+code+"\nĐã hết lượt nhập, vui lòng quay lại sau!");
                 return;
             }}}
             if (giftcode == null) {
-              Service.gI().sendThongBaoFromAdmin(player,"|7|VŨ TRỤ NGỌC RỒNG\n"+"|6|Giftcode vừa nhập không tồn tại trong hệ thống!");
+              Service.gI().sendThongBaoFromAdmin(player,"|7|NGỌC RỒNG RONERỒNG\n"+"|6|Giftcode vừa nhập không tồn tại trong hệ thống!");
             } else if (giftcode.timeCode()) {
-                Service.gI().sendThongBaoFromAdmin(player,"|7|VŨ TRỤ NGỌC RỒNG\n"+ "|6|Giftcode : " + code+"\nGiftcode này đã hết hạn");
+                Service.gI().sendThongBaoFromAdmin(player,"|7|NGỌC RỒNG RONERỒNG\n"+ "|6|Giftcode : " + code+"\nGiftcode này đã hết hạn");
             } else if (InventoryServiceNew.gI().getCountEmptyBag(player) < giftcode.detail.size()) {
-                Service.gI().sendThongBaoFromAdmin(player, "|7|VŨ TRỤ NGỌC RỒNG\n"+ "|6|Giftcode : " + code + "\nCần trống " + giftcode.detail.size() + " ô hành trang");
+                Service.gI().sendThongBaoFromAdmin(player, "|7|NGỌC RỒNG RONERỒNG\n"+ "|6|Giftcode : " + code + "\nCần trống " + giftcode.detail.size() + " ô hành trang");
             } else {
                 InventoryServiceNew.gI().addItemGiftCodeToPlayer(player,giftcode,code);
         } 

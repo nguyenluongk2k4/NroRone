@@ -2756,7 +2756,7 @@ public class NpcFactory {
                                 break;
                             case 4:
                                 this.createOtherMenu(player, ConstEvent.HLWEEN,
-                                        "Sự kiện Halloween chính thức tại VŨ TRỤ NGỌC RỒNG\n"
+                                        "Sự kiện Halloween chính thức tại NGỌC RỒNG RONE\n"
                                         + "Chuẩn bị x10 nguyên liệu Kẹo, Bánh Quy, Bí ngô để đổi Giỏ Kẹo cho ta nhé\n"
                                         + "Nguyên Liệu thu thập bằng cách đánh quái tại các hành tinh được chỉ định\n"
                                         + "Tích lũy 3 Giỏ Kẹo +  3 Vé mang qua đây ta sẽ cho con 1 Hộp Ma Quỷ\n"
@@ -2766,7 +2766,7 @@ public class NpcFactory {
                                 break;
                             case 5:
                                 this.createOtherMenu(player, ConstEvent.NHAGIAO,
-                                        "Sự kiện 20/11 chính thức tại VŨ TRỤ NGỌC RỒNG\n"
+                                        "Sự kiện 20/11 chính thức tại NGỌC RỒNG RONE\n"
                                         + "Số điểm hiện tại của bạn là : " + player.inventory.event
                                         + "\nTổng số hoa đã tặng " + player.inventory.event + "/999"
                                         + "\nToàn bộ máy chủ được nhân đôi số vàng rơi ra từ quái,thời gian còn lại "
@@ -2777,7 +2777,7 @@ public class NpcFactory {
                                 break;
                             case 6:
                                 this.createOtherMenu(player, ConstEvent.NOEL,
-                                        "Sự kiên giáng sinh VŨ TRỤ NGỌC RỒNG"
+                                        "Sự kiên giáng sinh NGỌC RỒNG RONE"
                                         + "\nKhi đội mũ len bất kì đánh quái sẽ có cơ hội nhận được kẹo giáng sinh"
                                         + "\nĐem 99 kẹo giáng sinh tới đây để đổi 1 Vớ,tất giáng sinh"
                                         + "\nChúc bạn một mùa giáng sinh vui vẻ",
@@ -2785,7 +2785,7 @@ public class NpcFactory {
                                 break;
                             case 7:
                                 this.createOtherMenu(player, ConstEvent.TET,
-                                        "Mừng Ngày Tết Nguyên Đán VŨ TRỤ NGỌC RỒNG"
+                                        "Mừng Ngày Tết Nguyên Đán NGỌC RỒNG RONE"
                                         + "\nBạn đang có: " + player.inventory.event + " điểm sự kiện"
                                         + "\n" + (ConstEvent.TONGSOBANH >= 500 ? "|7|HIỆN TẠI ĐANG X2 EXP TRÊN TOÀN MÁY CHỦ\nTHỜI GIAN CÒN: " + Util.tinhgio(ConstEvent.X2) : "|7|Tổng số bánh server: " + ConstEvent.TONGSOBANH
                                                 + "\nKhi số bánh nấu đạt đủ 500 bánh toàn máy chủ sẽ được X2 EXP")
@@ -2794,7 +2794,7 @@ public class NpcFactory {
                                 break;
                             case 8:
                                 this.createOtherMenu(player, ConstEvent.PHUNU,
-                                        "Sự kiện 8/3 chính thức tại VŨ TRỤ NGỌC RỒNG"
+                                        "Sự kiện 8/3 chính thức tại NGỌC RỒNG RONE"
                                         + "\nBạn đang có: " + player.inventory.event
                                         + " điểm sự kiện\nChúc bạn chơi game dui dẻ",
                                         "Tặng 1\n Bông hoa", "Tặng\n10 Bông", "Tặng\n99 Bông", "Đổi Capsule");
@@ -3393,7 +3393,7 @@ public class NpcFactory {
                                                 InventoryServiceNew.gI().addItemBag(player, tv);
                                                 InventoryServiceNew.gI().sendItemBags(player);
                                                 PlayerService.gI().sendInfoHpMpMoney(player);
-                                                Service.getInstance().sendThongBaoOK(player, "VŨ TRỤ NGỌC RỒNG lì xì cho bạn\nx" + slhn + " hồng ngọc\nx" + sltv + " thỏi vàng");
+                                                Service.getInstance().sendThongBaoOK(player, "NGỌC RỒNG RONERỒNG lì xì cho bạn\nx" + slhn + " hồng ngọc\nx" + sltv + " thỏi vàng");
                                                 Service.getInstance().sendThongBao(player, "Nhận lì xì thành công,chúc bạn năm mới dui dẻ");
                                             } else if (day > 15) {
                                                 Service.getInstance().sendThongBao(player, "Hết tết rồi còn đòi lì xì");
@@ -7174,7 +7174,7 @@ public class NpcFactory {
             public void openBaseMenu(Player player) {
                 if (canOpenNpc(player)) {
                     if (this.mapId == 21 || this.mapId == 22 || this.mapId == 23) {
-                        this.createOtherMenu(player, ConstNpc.BANKING, "|7|VŨ TRỤ NGỌC RỒNG\n"
+                        this.createOtherMenu(player, ConstNpc.BANKING, "|7|NGỌC RỒNG RONERỒNG\n"
                                 + "|2|Thông Tin Tổng\b" + "Chào bạn : " + player.name + " | ID: (" + player.id + ") | " + "Map : " + player.zone.map.mapName + "\n"
                                 + "Số dư : " + Util.format(player.getSession().vnd) + " VNĐ"
                                 + "\nTrạng thái : " + (player.getSession().actived == 1 ? " Đã mở thành viên" : " Chưa mở thành viên")
@@ -7192,7 +7192,7 @@ public class NpcFactory {
                         if (player.iDMark.getIndexMenu() == ConstNpc.BANKING) {
                             switch (select) {
                                 case 0:
-                                    NpcService.gI().createMenuConMeo(player, ConstNpc.QUY_DOI, 12639, "|7|VŨ TRỤ NGỌC RỒNG" + "\n"
+                                    NpcService.gI().createMenuConMeo(player, ConstNpc.QUY_DOI, 12639, "|7|NGỌC RỒNG RONERỒNG" + "\n"
                                             + "ĐỔI TIỀN\n"
                                             + "|2|Chào bạn : " + player.name
                                             + "\nSố Dư : " + Util.format(player.getSession().vnd) + " VNĐ "
@@ -7205,7 +7205,7 @@ public class NpcFactory {
                                             "Đổi\nThỏi Vàng", "Đổi\nHồng Ngọc", "Đổi\n Thỏi Bạc", "Đổi\n Thỏi Đồng");
                                     break;
                                 case 1:
-                                    NpcService.gI().createMenuConMeo(player, ConstNpc.MUA_DE, 12639, "|7|VŨ TRỤ NGỌC RỒNG" + "\n"
+                                    NpcService.gI().createMenuConMeo(player, ConstNpc.MUA_DE, 12639, "|7|NGỌC RỒNG RONERỒNG" + "\n"
                                             + "MUA ĐỆ TỬ\n"
                                             + "|2|Chào bạn : " + player.name
                                             + "\nSố Dư : " + Util.format(player.getSession().vnd) + " VNĐ\n"
@@ -7213,7 +7213,7 @@ public class NpcFactory {
                                             "CUMBER SSJ2\n10.000VNĐ", "GOKU ULTRA\n30.000VNĐ", "VEGETA BLUE\n30.000VNĐ");
                                     break;
                                 case 2:
-                                    NpcService.gI().createMenuConMeo(player, ConstNpc.DOI_SKILL, 12639, "|7|VŨ TRỤ NGỌC RỒNG" + "\n"
+                                    NpcService.gI().createMenuConMeo(player, ConstNpc.DOI_SKILL, 12639, "|7|NGỌC RỒNG RONERỒNG" + "\n"
                                             + "ĐỔI SKILL ĐỆ TỬ\n"
                                             + "|2|Chào bạn : " + player.name
                                             + "\nSố Dư : " + Util.format(player.getSession().vnd) + " VNĐ\n"
@@ -8498,7 +8498,7 @@ public class NpcFactory {
                                 break;
                             case 5:
                                 NpcService.gI().createMenuConMeo(player, ConstNpc.BUFFDHIEU, 12639,
-                                        "|7|VŨ TRỤ NGỌC RỒNG\n|2|TẶNG DANH HIỆU\nPlayer name : " + nhandhieu.name
+                                        "|7|NGỌC RỒNG RONERỒNG\n|2|TẶNG DANH HIỆU\nPlayer name : " + nhandhieu.name
                                         + "\n|5|Đại Thần : " + (nhandhieu.timedh1 > 0 ? Util.msToTime(player.timedh1) : nhandhieu.timedh1 <= 0 ? "Chưa Sở Hữu" : nhandhieu.usedh1 == true ? "Đang Bật" : "Đang Tắt")
                                         + "\nTrùm Cuối : " + (nhandhieu.timedh2 > 0 ? Util.msToTime(player.timedh2) : nhandhieu.timedh2 <= 0 ? "Chưa Sở Hữu" : nhandhieu.usedh2 == true ? "Đang Bật" : "Đang Tắt")
                                         + "\nBất Bại : " + (nhandhieu.timedh3 > 0 ? Util.msToTime(player.timedh3) : nhandhieu.timedh3 <= 0 ? "Chưa Sở Hữu" : nhandhieu.usedh3 == true ? "Đang Bật" : "Đang Tắt")
