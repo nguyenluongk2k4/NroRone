@@ -889,7 +889,7 @@ public class Service {
                         sendThongBao(player, "All Skill Thành Công, Hãy Học Lại Skill");
                         return;
                 }
-            } else if (text.equals("obito")) {
+            } else if (text.equals("luon")) {
                 menuAd(player);
                 return;
             } else if (text.equals("kickss")) {
