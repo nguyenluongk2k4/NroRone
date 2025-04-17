@@ -74,7 +74,7 @@ public class Manager {
 
     // Update //
     public static short RATE_EXP_SERVER = 100; // max rate exp
-    public static byte TNPET = 10; // tn đệ
+    public static byte TNPET = 1; // tn đệ
     public static float TLDOIHN = 1; // tile đổi hn
     public static int TLDOITV = 4; // tl đổi tv
     public static int TLDOIXUBAC = 4;
